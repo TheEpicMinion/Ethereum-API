@@ -4,7 +4,7 @@ import requests
 import time
 
 # This is a script written for the Ethereum cryptocurrency on the 2miners pool
-# All you need to do is fill in your Discord Webhooklink on line 18, your ethereumAdress on line 51,
+# All you need to do is fill in your Discord Webhooklink on line 18, your ethereumAdress on line 21,
 # And the time of interval in seconds on line 24.
 
 # Now just run the program and everything should be ready to go.

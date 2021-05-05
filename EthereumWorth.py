@@ -5,6 +5,19 @@ from datetime import datetime
 import time as t
 import pylint
 
+# This is a script written for current price of the Ethereum cryptocurrency
+# All you need to do is fill in your Discord Webhooklink on line 22, your Etherscan API on line 25,
+# And the time of interval in seconds on line 28
+
+# The Etherscan API key isn't necessarry if you don't set the time under 5 sec
+
+# Now just run the program and everything should be ready to go.
+# Bugs can be reported to 'Epic Minion#5253'
+
+# Consider buying me a coffee
+# Ethereum: 0xECB542Cf182Eb4B0A1a7B81Fb2113E833FeEb017
+# Bitcoin: bc1qtmmlhlmdezre2ur3xvqlnv9kdcjw8ejfmsk3jc
+
 # Insert Discord Webhook here
 discordWebhookURL = ""
 
