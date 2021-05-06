@@ -84,6 +84,9 @@ while(True):
     # Retrieve worker value from JSON
     workerAmount = data["workers"]
 
+    # initialize/reset the counter
+    i = 0
+
     # Loop throug every worker name
     for key in json.loads(json.dumps(workerAmount)):
         if i < 30: 
@@ -100,9 +103,6 @@ while(True):
                     workerStr = str(workerStr + ("*" + key + "*: " + workerEmoji + "\n"))
         # Up one the counter
         i = i + 1
-
-    # reset the counter
-    i = 0
 
     # Retrieve hashrates from JSON
     hashrateCurrent = str(data["currentHashrate"])
