@@ -140,7 +140,7 @@ while(True):
         balancePaid = str(balancePaid)[:-3] + "." + str(balancePaid)[(len(str(balancePaid))-3):]
 
     # Calculate progress amount
-    progress = str(float(balanceUnpaid) / 0.05 * 100)
+    progress = str(round((float(balanceUnpaid) / 0.05 * 100), 3))
 
     # Send the discord Webhook
     discordWebhook()
