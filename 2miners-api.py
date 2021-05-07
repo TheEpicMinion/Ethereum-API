@@ -49,7 +49,7 @@ def discordWebhook():
                         "name": "Rewards",
                         "value": sumReward0 + "\n" + sumReward1 + "\n" + sumReward2,
                         "inline": True
-                    },
+                    },  
                     {
                         "name": "Payouts",
                         "value": "Paid: **" + balancePaid + "**\nUnpaid: **" + balanceUnpaid + "**\n Progress: **" + progress +  "**%",
@@ -77,9 +77,9 @@ while(True):
     sumReward2 = data["sumrewards"][2]["reward"]
 
     # Clear last 3 char and add string
-    sumReward0 = "**01h: **" + str(sumReward0)[:-3] + "µ ETH"
-    sumReward1 = "**12h: **" + str(sumReward1)[:-3] + "µ ETH"
-    sumReward2 = "**24h: **" + str(sumReward2)[:-3] + "µ ETH"
+    sumReward0 = "**01h: **" + str(sumReward0)[:-3] + "\xb5 ETH"
+    sumReward1 = "**12h: **" + str(sumReward1)[:-3] + "\xb5 ETH"
+    sumReward2 = "**24h: **" + str(sumReward2)[:-3] + "\xb5 ETH"
 
     # Retrieve worker value from JSON
     workerAmount = data["workers"]
