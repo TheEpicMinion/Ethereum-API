@@ -134,9 +134,12 @@ while(True):
 
     # Retrieve paid balance from JSON
     balancePaid = str(data["stats"]["paid"])[:-6]
-    if int(balancePaid) < 1000:
+
+    if int(balancePaid) < 100:
         balancePaid = "0.0" + str(balancePaid)
-    else :
+    elif int(balancePaid) < 1000 :
+        balancePaid = "0." + str(balancePaid)
+    else:
         balancePaid = str(balancePaid)[:-3] + "." + str(balancePaid)[(len(str(balancePaid))-3):]
 
     # Calculate progress amount
