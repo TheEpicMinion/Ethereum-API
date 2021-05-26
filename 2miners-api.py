@@ -52,7 +52,7 @@ def discordWebhook():
                     },  
                     {
                         "name": "Payouts",
-                        "value": "Paid: **" + balancePaid + "**\nUnpaid: **" + balanceUnpaid + "**\n Progress: **" + progress +  "**%",
+                        "value": "Paid: **" + balancePaid + "**\nUnpaid: **" + balanceUnpaid + "**\n Progress: **" + progress +  "**%\n24H Change: **" + procentChange + "**%",
                         "inline": True
                     }
                 ],
@@ -144,6 +144,26 @@ while(True):
 
     # Calculate progress amount
     progress = str(round((float(balanceUnpaid) / 0.05 * 100), 3))
+
+    # Clear the sumReward of extra char's
+    change = sumReward2[-9:-5]
+
+    # Add chars in front
+    if int(change) < 10:
+        change = "0.00000" + change
+    elif int(change) < 100:
+        change = "0.0000" + change
+    elif int(change) < 1000:
+        change = "0.000" + change
+    elif int(change) < 10000:
+        change = "0.00" + change
+    elif int(change) < 100000:
+        change = "0.0" + change
+    elif int(change) < 1000000:
+        change = "0." + change
+
+    # Calculate the 24h progress in procent
+    procentChange = str(round((float(change) / 0.05 * 100), 2))
 
     # Send the discord Webhook
     discordWebhook()
